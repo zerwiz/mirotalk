@@ -1,0 +1,343 @@
+/* ============================================================
+   Þing — the landing of the hall. Cut from docs/design.md §4:
+   stone and bone, bronze and blood. This page is Hlidskjalf's
+   threshold — no vendor skin survives here.
+   ============================================================ */
+
+.thing-landing {
+    background: radial-gradient(1200px 800px at 50% -10%, #1a1610, #0e0c09);
+    color: var(--ymir-text-0, #cfc3a9);
+    font-family: var(--ymir-font-body, 'Newsreader', Georgia, serif);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.thing-landing .body-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.thing-landing main {
+    flex: 1;
+}
+
+.thing-landing .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ---------- header: the lintel ---------- */
+.hall-header {
+    border-bottom: 1px solid rgba(201, 151, 63, 0.16);
+    background: rgba(14, 12, 9, 0.72);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+.hall-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+
+.hall-mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ymir-text-0, #cfc3a9);
+    text-decoration: none;
+}
+
+.hall-word {
+    font-family: var(--ymir-font-head, 'Cormorant', Georgia, serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--ymir-chisel, #c9973f);
+}
+
+.hall-nav a {
+    color: var(--ymir-text-2, #9a8f75);
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 160ms ease;
+}
+
+.hall-nav a:hover {
+    color: var(--ymir-bronze-1, #c9973f);
+}
+
+/* ---------- hero: the threshold ---------- */
+.hero {
+    padding: 88px 0 40px;
+    position: relative;
+}
+
+.hero-eyebrow {
+    font-family: var(--ymir-font-mono, 'IBM Plex Mono', monospace);
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ymir-bronze-1, #c9973f);
+    margin: 0 0 18px;
+}
+
+.hero-title {
+    font-family: var(--ymir-font-head, 'Cormorant', Georgia, serif);
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    line-height: 1.06;
+    font-weight: 600;
+    color: var(--ymir-text-0, #cfc3a9);
+    margin: 0 0 22px;
+    max-width: 18ch;
+}
+
+.hero-deck {
+    font-size: 1.1rem;
+    line-height: 1.62;
+    color: var(--ymir-text-1, rgba(207, 195, 169, 0.82));
+    max-width: 56ch;
+    margin: 0 0 44px;
+}
+
+/* the join box — a bronze-plated plate */
+.hero-cta {
+    border: 1px solid rgba(201, 151, 63, 0.22);
+    border-radius: 12px;
+    background: rgba(21, 18, 9, 0.72);
+    box-shadow: inset 0 0 0 1px rgba(201, 151, 63, 0.10), 0 20px 60px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    padding: 34px;
+    max-width: 640px;
+}
+
+.cta-hint {
+    font-family: var(--ymir-font-head, 'Cormorant', Georgia, serif);
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--ymir-text-0, #cfc3a9);
+    margin: 0 0 20px;
+}
+
+.join-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.join-input {
+    flex: 1 1 180px;
+    background: rgba(14, 12, 9, 0.8);
+    border: 1px solid rgba(201, 151, 63, 0.25);
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: var(--ymir-text-0, #cfc3a9);
+    font-family: var(--ymir-font-mono, 'IBM Plex Mono', monospace);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 160ms ease;
+}
+
+.join-input:focus {
+    border-color: var(--ymir-bronze-1, #c9973f);
+    box-shadow: 0 0 0 3px rgba(201, 151, 63, 0.18);
+}
+
+.join-gen {
+    width: 44px;
+    height: 44px;
+    background: rgba(34, 29, 20, 0.6);
+    border: 1px solid rgba(201, 151, 63, 0.3);
+    border-radius: 50%;
+    color: var(--ymir-bronze-1, #c9973f);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 160ms ease;
+}
+
+.join-gen.spin {
+    animation: thing-spin 700ms ease;
+}
+
+@keyframes thing-spin {
+    from { transform: rotate(0); }
+    to   { transform: rotate(360deg); }
+}
+
+.join-btn {
+    background: linear-gradient(135deg, var(--ymir-bronze-1, #c9973f), var(--ymir-bronze-2, #7d5f2a));
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 12px 22px;
+    color: #0e0c09;
+    font-family: var(--ymir-font-mono, 'IBM Plex Mono', monospace);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: filter 160ms ease, transform 120ms ease;
+}
+
+.join-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.join-custom {
+    background: transparent;
+    border: 1px solid rgba(201, 151, 63, 0.45);
+    border-radius: 8px;
+    padding: 12px 18px;
+    color: var(--ymir-bronze-1, #c9973f);
+    font-family: var(--ymir-font-mono, 'IBM Plex Mono', monospace);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+}
+
+.join-custom:hover {
+    background: rgba(201, 151, 63, 0.1);
+}
+
+.last-room {
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: var(--ymir-text-2, #9a8f75);
+}
+
+.last-room a {
+    color: var(--ymir-bronze-1, #c9973f);
+    text-decoration: none;
+    font-family: var(--ymir-font-mono, 'IBM Plex Mono', monospace);
+}
+
+/* ---------- features: the works ---------- */
+.features {
+    padding: 40px 0 72px;
+}
+
+.features-head {
+    max-width: 620px;
+    margin-bottom: 40px;
+}
+
+.features-head h2 {
+    font-family: var(--ymir-font-head, 'Cormorant', Georgia, serif);
+    font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+    font-weight: 600;
+    color: var(--ymir-text-0, #cfc3a9);
+    margin: 0 0 14px;
+}
+
+.features-head p {
+    color: var(--ymir-text-1, rgba(207, 195, 169, 0.82));
+    line-height: 1.6;
+    margin: 0;
+}
+
+.tiles-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 18px;
+}
+
+.tile {
+    border: 1px solid rgba(201, 151, 63, 0.14);
+    border-radius: 12px;
+    background: linear-gradient(160deg, #1a1610, #151209);
+    box-shadow: inset 0 0 0 1px rgba(201, 151, 63, 0.08);
+    padding: 24px;
+    transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.tile:hover {
+    border-color: rgba(201, 151, 63, 0.34);
+    transform: translateY(-2px);
+}
+
+.tile-head {
+    margin-bottom: 16px;
+}
+
+.tile-icon {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(201, 151, 63, 0.28));
+}
+
+.tile h3 {
+    font-family: var(--ymir-font-head, 'Cormorant', Georgia, serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ymir-bronze-1, #c9973f);
+    margin: 0 0 8px;
+}
+
+.tile p {
+    color: var(--ymir-text-1, rgba(207, 195, 169, 0.82));
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* ---------- footer: the doorposts ---------- */
+.hall-footer {
+    border-top: 1px solid rgba(201, 151, 63, 0.14);
+    background: rgba(14, 12, 9, 0.72);
+    padding: 22px 0;
+}
+
+.hall-footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hall-footer-links a {
+    color: var(--ymir-text-2, #9a8f75);
+    font-size: 0.85rem;
+    text-decoration: none;
+    margin-left: 18px;
+}
+
+.hall-footer-links a:hover {
+    color: var(--ymir-bronze-1, #c9973f);
+}
+
+.hall-copy {
+    color: var(--ymir-text-3, #6b6250);
+    font-size: 0.82rem;
+}
+
+/* ---------- selection: amber on pale bone ---------- */
+::selection {
+    background: #57411a;
+    color: #f0e6cd;
+}
+
+.screen-reader {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* ---------- small ---------- */
+@media (max-width: 640px) {
+    .hero { padding: 56px 0 24px; }
+    .hero-cta { padding: 24px; }
+    .hall-nav a { margin-left: 14px; }
+}
