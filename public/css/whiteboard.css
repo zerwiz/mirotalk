@@ -212,7 +212,7 @@
 
 .whiteboard-close-button:hover {
     background: rgba(255, 92, 92, 0.18) !important;
-    color: #ff8a8a !important;
+    color: #c2584a !important;
 }
 
 .whiteboard-responsive-action span {
@@ -245,7 +245,7 @@
 }
 .whiteboardColorPicker:hover {
     box-shadow: 0 0 0 2px rgba(102, 190, 255, 0.18);
-    border: 2px solid #66beff;
+    border: 2px solid #7d5f2a;
     transform: scale(1.12);
 }
 .whiteboardColorPicker::-webkit-color-swatch {
@@ -425,7 +425,7 @@
 }
 
 .wb-shortcuts-text {
-    color: #66beff;
+    color: #7d5f2a;
     font-weight: 600;
     font-size: 0.9rem;
     letter-spacing: 0.02em;

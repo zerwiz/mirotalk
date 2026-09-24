@@ -18,12 +18,12 @@ body {
     padding: 40px;
     border: 0.5px solid rgb(255 255 255 / 32%);
     border-radius: 10px;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 60%, rgba(70, 120, 249, 0.25) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 60%, rgba(201, 151, 63, 0.25) 100%);
 }
 
 #loginForm:hover,
 #loginForm:focus-within {
-    box-shadow: 0 12px 40px 0 rgba(70, 120, 249, 0.25);
+    box-shadow: 0 12px 40px 0 rgba(201, 151, 63, 0.25);
     border-color: #c9973f;
 }
 
@@ -31,7 +31,7 @@ body {
 #joinRoomForm {
     display: none;
     margin-top: 32px;
-    background: rgba(70, 120, 249, 0.08);
+    background: rgba(201, 151, 63, 0.08);
     border-radius: 10px;
     padding: 32px 24px;
     transition:
@@ -347,7 +347,7 @@ html {
 }
 
 body {
-    /* background: #16171b; */
+    /* background: #0e0c09; */
     background: radial-gradient(#0e0c09, #0e0c09);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -461,11 +461,11 @@ td:last-child {
 .invert-color hr {
     display: block;
     height: 1px;
-    background: #e5e9ff;
+    background: #221d14;
 }
 
 .invert-color tr {
-    border-bottom: 1px solid #e5e9ff;
+    border-bottom: 1px solid #221d14;
 }
 
 html {
@@ -591,7 +591,7 @@ a.func-link {
 
 a.func-link:hover,
 a.func-link:active {
-    color: #6991fa;
+    color: #7d5f2a;
 }
 
 h1,
@@ -730,7 +730,7 @@ strong {
 
 .invert-color a:not(.button):hover,
 .invert-color a:not(.button):active {
-    color: #1c1d22;
+    color: #2b241a;
     outline: 0;
 }
 
@@ -741,7 +741,7 @@ strong {
 
 .invert-color a.func-link:hover,
 .invert-color a.func-link:active {
-    color: #6991fa;
+    color: #7d5f2a;
 }
 
 .invert-color h1,
@@ -756,11 +756,11 @@ strong {
 .invert-color .h4,
 .invert-color .h5,
 .invert-color .h6 {
-    color: #16171b;
+    color: #0e0c09;
 }
 
 .invert-color address {
-    border-color: #e5e9ff;
+    border-color: #221d14;
 }
 
 .invert-color pre,
@@ -928,12 +928,12 @@ strong {
 
 .button[disabled] {
     cursor: not-allowed;
-    color: #16171b;
+    color: #0e0c09;
     background-color: #292b32 !important;
 }
 
 .button[disabled].is-loading::after {
-    border-color: #16171b;
+    border-color: #0e0c09;
 }
 
 .button-sm {
@@ -958,7 +958,7 @@ strong {
     color: #ffffff;
     background: linear-gradient(135deg, #c9973f 0%, #c9973f 100%);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 14px rgba(55, 109, 249, 0.35);
+    box-shadow: 0 4px 14px rgba(201, 151, 63, 0.35);
     transition:
         background 0.2s ease,
         transform 0.12s ease,
@@ -968,12 +968,12 @@ strong {
 .button-primary:hover {
     background: linear-gradient(135deg, #c9973f 0%, #c9973f 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(55, 109, 249, 0.45);
+    box-shadow: 0 6px 20px rgba(201, 151, 63, 0.45);
 }
 
 .button-primary:active {
     transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(55, 109, 249, 0.3);
+    box-shadow: 0 2px 8px rgba(201, 151, 63, 0.3);
 }
 
 .button-primary.is-loading::after {
@@ -982,9 +982,9 @@ strong {
 
 .button-custom-room {
     background:
-        radial-gradient(900px circle at 20% 15%, rgba(70, 120, 249, 0.22) 0%, rgba(70, 120, 249, 0) 55%),
-        radial-gradient(700px circle at 80% 85%, rgba(70, 120, 249, 0.14) 0%, rgba(70, 120, 249, 0) 52%),
-        linear-gradient(135deg, rgba(0, 0, 0, 0.95) 60%, rgba(70, 120, 249, 0.25) 100%);
+        radial-gradient(900px circle at 20% 15%, rgba(201, 151, 63, 0.22) 0%, rgba(201, 151, 63, 0) 55%),
+        radial-gradient(700px circle at 80% 85%, rgba(201, 151, 63, 0.14) 0%, rgba(201, 151, 63, 0) 52%),
+        linear-gradient(135deg, rgba(0, 0, 0, 0.95) 60%, rgba(201, 151, 63, 0.25) 100%);
     box-shadow:
         0 8px 24px rgba(0, 0, 0, 0.45),
         inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -1009,7 +1009,7 @@ strong {
     border: 0;
     color: #f9faff !important;
     background-color: #000000;
-    background: linear-gradient(100deg, #c9973f 0, #ff5fa0 75%, #ffc55a 100%);
+    background: linear-gradient(100deg, #c9973f 0, #96a0a8 75%, #c9973f 100%);
 }
 
 .button-custom:hover {
@@ -1022,11 +1022,11 @@ strong {
 
 .button-secondary {
     color: #f9faff;
-    background-color: #ff5fa0;
+    background-color: #96a0a8;
 }
 
 .button-secondary:hover {
-    background-color: #ff6ea9;
+    background-color: #9a8f75;
 }
 
 .button-secondary.is-loading::after {
@@ -1110,7 +1110,7 @@ fieldset {
     background-color: #f9faff;
     border-width: 1px;
     border-style: solid;
-    border-color: #16171b;
+    border-color: #0e0c09;
 }
 
 .form-input:hover,
@@ -1138,21 +1138,21 @@ fieldset {
 .form-radio input[disabled] {
     cursor: not-allowed;
     background-color: #292b32;
-    border-color: #1c1d22;
+    border-color: #2b241a;
 }
 
 .form-input.form-error,
 .form-select.form-error,
 .form-checkbox input.form-error,
 .form-radio input.form-error {
-    border-color: #ff5fa0;
+    border-color: #96a0a8;
 }
 
 .form-input.form-warning,
 .form-select.form-warning,
 .form-checkbox input.form-warning,
 .form-radio input.form-warning {
-    border-color: #ffc55a;
+    border-color: #c9973f;
 }
 
 .form-input.form-success,
@@ -1171,7 +1171,7 @@ fieldset {
     padding: 11px 15px;
     height: 48px;
     border-radius: 8px !important;
-    color: #16171b;
+    color: #0e0c09;
     box-shadow: none;
     max-width: 100%;
     width: 100%;
@@ -1392,7 +1392,7 @@ textarea.form-input {
 .invert-color .form-select,
 .invert-color .form-checkbox input,
 .invert-color .form-radio input {
-    border-color: #e5e9ff;
+    border-color: #221d14;
 }
 
 .invert-color .form-input:active,
@@ -1410,7 +1410,7 @@ textarea.form-input {
 .invert-color .form-select[disabled],
 .invert-color .form-checkbox input[disabled],
 .invert-color .form-radio input[disabled] {
-    background-color: #e5e9ff;
+    background-color: #221d14;
 }
 
 .invert-color .form-input,
@@ -1479,17 +1479,17 @@ textarea.form-input {
 }
 
 .room-input-wrap .form-input:hover {
-    border-color: rgba(70, 120, 249, 0.6);
+    border-color: rgba(201, 151, 63, 0.6);
     background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 16px rgba(70, 120, 249, 0.15);
+    box-shadow: 0 4px 16px rgba(201, 151, 63, 0.15);
 }
 
 .room-input-wrap .form-input:focus {
     border-color: #c9973f;
     background-color: rgba(0, 0, 0, 0.55);
     box-shadow:
-        0 0 0 3px rgba(70, 120, 249, 0.2),
-        0 4px 16px rgba(70, 120, 249, 0.15);
+        0 0 0 3px rgba(201, 151, 63, 0.2),
+        0 4px 16px rgba(201, 151, 63, 0.15);
 }
 
 .room-input-wrap .form-input::placeholder {
@@ -1517,23 +1517,23 @@ textarea.form-input {
 
 .room-gen-btn:hover {
     color: #ffffff;
-    background: rgba(70, 120, 249, 0.3);
-    border-color: rgba(70, 120, 249, 0.5);
+    background: rgba(201, 151, 63, 0.3);
+    border-color: rgba(201, 151, 63, 0.5);
 }
 
 .room-gen-btn:focus-visible {
     outline: none;
     color: #ffffff;
-    background: rgba(70, 120, 249, 0.3);
+    background: rgba(201, 151, 63, 0.3);
     border-color: #c9973f;
 }
 
 .room-gen-btn:active {
     color: #ffffff;
-    background: rgba(70, 120, 249, 0.5);
+    background: rgba(201, 151, 63, 0.5);
     border-color: #c9973f;
     transform: translateY(-50%) scale(0.85);
-    box-shadow: 0 0 8px rgba(70, 120, 249, 0.4);
+    box-shadow: 0 0 8px rgba(201, 151, 63, 0.4);
 }
 
 .room-gen-btn.spin {
@@ -1629,7 +1629,7 @@ textarea.form-input {
 .invert-color .hamburger-inner,
 .invert-color .hamburger-inner::before,
 .invert-color .hamburger-inner::after {
-    background: #1c1d22;
+    background: #2b241a;
 }
 
 .hamburger-inner {
@@ -1726,7 +1726,7 @@ textarea.form-input {
     width: 100%;
     display: block;
     height: 1px;
-    background: #e5e9ff;
+    background: #221d14;
 }
 
 .invert-color .accordion li:last-of-type {
@@ -1741,7 +1741,7 @@ textarea.form-input {
     width: 100%;
     display: block;
     height: 1px;
-    background: #e5e9ff;
+    background: #221d14;
 }
 
 .accordion-header {
@@ -2380,7 +2380,7 @@ textarea.form-input {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #16171b;
+    background: #0e0c09;
     z-index: -10;
 }
 
@@ -2407,7 +2407,7 @@ textarea.form-input {
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: #16171b; */
+    /* background: #0e0c09; */
     background: black;
     z-index: -3;
 }
@@ -2479,7 +2479,7 @@ textarea.form-input {
 }
 
 .invert-color .footer-block-title {
-    color: #16171b;
+    color: #0e0c09;
 }
 
 .footer-social a,
@@ -2516,7 +2516,7 @@ textarea.form-input {
 }
 
 .footer-social a:hover svg {
-    fill: #6991fa;
+    fill: #7d5f2a;
 }
 
 .footer-nav {
@@ -2976,7 +2976,7 @@ ul.pricing-item-features-list li {
 #pastSponsors .past-sponsors-toggle {
     border: 0;
     background: transparent;
-    color: #d6ddf5;
+    color: #9a8f75;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -3002,7 +3002,7 @@ ul.pricing-item-features-list li {
 
 #pastSponsors .past-sponsors-toggle-icon {
     font-size: 0.85rem;
-    color: #4a74f5;
+    color: #7d5f2a;
     transform: rotate(-90deg);
     transition: transform 0.25s ease;
 }
@@ -3248,7 +3248,7 @@ ul.pricing-item-features-list li {
     display: inline-flex;
     padding: 1rem;
     border-radius: 1rem;
-    background: radial-gradient(circle at bottom, #c9973f 0%, #ff79af 50%, #ff8d74 100%);
+    background: radial-gradient(circle at bottom, #c9973f 0%, #7d5f2a 50%, #9a8f75 100%);
 }
 
 .pricing .tiles-item-inner {
@@ -3373,7 +3373,7 @@ ul.pricing-item-features-list li.is-checked::after {
 }
 
 .testimonial-item-link a:hover {
-    color: #6991fa;
+    color: #7d5f2a;
 }
 
 .cta .form-input {
@@ -3385,7 +3385,7 @@ ul.pricing-item-features-list li.is-checked::after {
     padding-left: 16px;
     padding-right: 16px;
     background-color: #c9973f;
-    background: linear-gradient(100deg, #c9973f 0, #ff5fa0 75%, #ffc55a 100%);
+    background: linear-gradient(100deg, #c9973f 0, #96a0a8 75%, #c9973f 100%);
 }
 
 @media (min-width: 641px) {
@@ -3464,15 +3464,15 @@ ul.pricing-item-features-list li.is-checked::after {
 }
 
 .text-color-secondary {
-    color: #ff5fa0;
+    color: #96a0a8;
 }
 
 .text-color-error {
-    color: #ff5fa0;
+    color: #96a0a8;
 }
 
 .text-color-warning {
-    color: #ffc55a;
+    color: #c9973f;
 }
 
 .text-color-success {
@@ -3480,11 +3480,11 @@ ul.pricing-item-features-list li.is-checked::after {
 }
 
 .invert-color .text-color-high {
-    color: #16171b;
+    color: #0e0c09;
 }
 
 .invert-color .text-color-mid {
-    color: #1c1d22;
+    color: #2b241a;
 }
 
 .invert-color .text-color-low {
@@ -3563,7 +3563,7 @@ img.has-shadow {
     width: 100%;
     display: block;
     height: 1px;
-    background: #e5e9ff;
+    background: #221d14;
 }
 
 .invert-color .has-bottom-divider {
@@ -3578,7 +3578,7 @@ img.has-shadow {
     width: 100%;
     display: block;
     height: 1px;
-    background: #e5e9ff;
+    background: #221d14;
 }
 
 .center-content {
@@ -4084,12 +4084,12 @@ img.has-shadow {
 html,
 body {
     scrollbar-width: thin;
-    scrollbar-color: #c9973f #1a1b1f;
+    scrollbar-color: #c9973f #2b241a;
 }
 
 /* Target the scrollbar track */
 ::-webkit-scrollbar {
-    background: #1a1b1f;
+    background: #2b241a;
     width: 10px; /* width of the scrollbar */
 }
 
@@ -4149,7 +4149,7 @@ body {
 }
 
 .last-room a:hover {
-    background-color: rgba(70, 120, 249, 0.15);
+    background-color: rgba(201, 151, 63, 0.15);
     color: #c9973f;
     transition: all 0.2s ease;
 }
@@ -4205,7 +4205,7 @@ body {
 
 .blue {
     font-weight: bold !important;
-    color: #00bfff !important;
+    color: #c9973f !important;
 }
 
 .blue:hover {
@@ -4278,7 +4278,7 @@ body {
 
 .support-icon .fa-heart {
     font-size: 48px;
-    color: #ff4757;
+    color: #c2584a;
     filter: drop-shadow(0 4px 8px rgba(255, 71, 87, 0.3));
 }
 
@@ -4425,7 +4425,7 @@ body {
 .support-footer {
     margin-top: 32px;
     padding-top: 24px;
-    border-top: 1px solid rgba(70, 120, 249, 0.2);
+    border-top: 1px solid rgba(201, 151, 63, 0.2);
 }
 
 .support-footer a {
@@ -4483,13 +4483,13 @@ body {
     --landing-surface: #1d2026;
     --landing-surface-raised: #242830;
     --landing-border: rgba(255, 255, 255, 0.1);
-    --landing-border-hover: rgba(70, 120, 249, 0.42);
+    --landing-border-hover: rgba(201, 151, 63, 0.42);
     --landing-text: #f4f7fb;
     --landing-text-muted: #959cb1;
     --landing-primary: #c9973f;
     --landing-primary-bright: #c9973f;
-    --landing-secondary: #ff5fa0;
-    --landing-accent: #ffc55a;
+    --landing-secondary: #96a0a8;
+    --landing-accent: #c9973f;
 }
 
 .body-wrap {
@@ -4534,7 +4534,7 @@ body {
 }
 
 .site-header .brand:hover img {
-    filter: brightness(1.12) saturate(1.08) drop-shadow(0 8px 22px rgba(22, 140, 255, 0.35));
+    filter: brightness(1.12) saturate(1.08) drop-shadow(0 8px 22px rgba(201, 151, 63, 0.35));
     transform: translateY(-2px);
 }
 
@@ -4584,7 +4584,7 @@ body {
     padding: 38px 40px;
     border: 1px solid var(--landing-border);
     border-radius: 8px;
-    background: linear-gradient(105deg, rgba(22, 140, 255, 0.13), transparent 44%), var(--landing-surface);
+    background: linear-gradient(105deg, rgba(201, 151, 63, 0.13), transparent 44%), var(--landing-surface);
     box-shadow:
         0 24px 70px rgba(0, 0, 0, 0.32),
         inset 0 1px 0 rgba(255, 255, 255, 0.04);
@@ -4627,7 +4627,7 @@ body {
     border-color: var(--landing-primary);
     background: #141a22;
     box-shadow:
-        0 0 0 3px rgba(22, 140, 255, 0.18),
+        0 0 0 3px rgba(201, 151, 63, 0.18),
         inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -4641,7 +4641,7 @@ body {
 
 .room-gen-btn:hover {
     border-color: rgba(50, 184, 232, 0.34);
-    background: rgba(22, 140, 255, 0.18);
+    background: rgba(201, 151, 63, 0.18);
 }
 
 .button {
@@ -4652,12 +4652,12 @@ body {
 
 .button-primary {
     background: linear-gradient(100deg, var(--landing-primary), var(--landing-primary-bright));
-    box-shadow: 0 10px 26px rgba(22, 140, 255, 0.24);
+    box-shadow: 0 10px 26px rgba(201, 151, 63, 0.24);
 }
 
 .button-primary:hover {
-    background: linear-gradient(100deg, #2495ff, #41c1eb);
-    box-shadow: 0 12px 30px rgba(22, 140, 255, 0.34);
+    background: linear-gradient(100deg, #c9973f, #7d5f2a);
+    box-shadow: 0 12px 30px rgba(201, 151, 63, 0.34);
 }
 
 .button-custom-room {
@@ -4675,17 +4675,17 @@ body {
 .room-gen-btn:focus-visible,
 .past-sponsors-toggle:focus-visible,
 a:focus-visible {
-    outline: 3px solid rgba(70, 120, 249, 0.9);
+    outline: 3px solid rgba(201, 151, 63, 0.9);
     outline-offset: 3px;
 }
 
 .last-room,
 .last-room span {
-    color: #8f9bad;
+    color: #9a8f75;
 }
 
 .last-room a {
-    color: #8dc8ff;
+    color: #9a8f75;
 }
 
 .section-header h2 {
@@ -4724,7 +4724,7 @@ a:focus-visible {
     right: 24px;
     left: 24px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(70, 120, 249, 0.72), rgba(255, 95, 160, 0.5), transparent);
+    background: linear-gradient(90deg, transparent, rgba(201, 151, 63, 0.72), rgba(150, 160, 168, 0.5), transparent);
     opacity: 0.62;
 }
 
@@ -4745,8 +4745,8 @@ a:focus-visible {
     border: 0;
     border-radius: 6px;
     background:
-        radial-gradient(circle at 50% 115%, rgba(55, 109, 249, 0.62), transparent 58%),
-        radial-gradient(circle at 88% 4%, rgba(255, 95, 160, 0.3), transparent 56%),
+        radial-gradient(circle at 50% 115%, rgba(201, 151, 63, 0.62), transparent 58%),
+        radial-gradient(circle at 88% 4%, rgba(150, 160, 168, 0.3), transparent 56%),
         linear-gradient(145deg, #202633, #151a22);
     box-shadow: none;
     transition:
@@ -4841,12 +4841,12 @@ a:focus-visible {
 
 #tryEasier .section-inner {
     border-top-color: transparent;
-    background: linear-gradient(110deg, rgba(55, 109, 249, 0.11), rgba(255, 95, 160, 0.06));
+    background: linear-gradient(110deg, rgba(201, 151, 63, 0.11), rgba(150, 160, 168, 0.06));
 }
 
 #tryEasier .button-custom {
-    background: linear-gradient(100deg, var(--landing-primary), #32b8e8);
-    box-shadow: 0 10px 28px rgba(55, 109, 249, 0.22);
+    background: linear-gradient(100deg, var(--landing-primary), #7d5f2a);
+    box-shadow: 0 10px 28px rgba(201, 151, 63, 0.22);
 }
 
 .site-footer::before {
