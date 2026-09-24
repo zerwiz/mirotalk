@@ -1022,6 +1022,15 @@
                                     </td>
                                     <td><input id="switchNoiseSuppression" class="toggle" type="checkbox" /></td>
                                 </tr>
+                                <tr id="videoSkinBtn">
+                                    <td class="w-80">
+                                        <div class="title">
+                                            <i class="fas fa-wand-magic-sparkles"></i>
+                                            <p id="labelVideoSkin">Video Skin (background blur)</p>
+                                        </div>
+                                    </td>
+                                    <td><input id="switchVideoSkin" class="toggle" type="checkbox" /></td>
+                                </tr>
                             </table>
                         </div>
                         <div id="audioOutputDiv" class="settings-field">
@@ -2197,11 +2206,13 @@ Note</textarea>
         <script defer src="../js/screenReader.js"></script>
         <script defer src="../js/wakeLock.js"></script>
         <script defer src="../js/roomTemplate.js"></script>
+        <script defer src="../mediapipe/selfie_segmentation.js"></script>
+        <script defer src="../js/thingBackground.js"></script>
+        <script defer src="../js/nodeProcessor.js"></script>
         <script defer src="../js/client.js"></script>
         <script defer src="../js/networkStats.js"></script>
         <script defer src="../js/speechRecognition.js"></script>
         <script defer src="../js/whisperTranscription.js"></script>
-        <script defer src="../js/nodeProcessor.js"></script>
 
         <!-- end of Js scripts -->
 
