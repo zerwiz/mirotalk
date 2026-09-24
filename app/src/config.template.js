@@ -305,9 +305,11 @@ module.exports = {
     // Stats / Analytics
     // ==========================================
     stats: {
-        enabled: process.env.STATS_ENABLED ? getEnvBoolean(process.env.STATS_ENABLED) : true,
-        src: process.env.STATS_SCR || 'https://stats.mirotalk.com/script.js',
-        id: process.env.STATS_ID || 'c7615aa7-ceec-464a-baba-54cb605d7261',
+        // The hall keeps its own counsel: no upstream beacon, no third party
+        // hears who gathers here. Enable only with your own Umami endpoint.
+        enabled: process.env.STATS_ENABLED ? getEnvBoolean(process.env.STATS_ENABLED) : false,
+        src: process.env.STATS_SCR || '',
+        id: process.env.STATS_ID || '',
     },
 
     // ==========================================
