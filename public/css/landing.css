@@ -3214,11 +3214,8 @@ ul.pricing-item-features-list li {
     width: 100%;
     max-width: 100%;
     height: 1024px;
-    /* background-image: url(../images/illustration-section-01.svg); */
-    /* background-image: url(../images/bg.svg); */
-    background-image: url(../images/header.png);
-    background-repeat: no-repeat;
-    background-size: cover; /*auto*/
+    /* the hall paints its own stone — no upstream blue-purple sheet */
+    background: transparent;
     left: 50%;
     top: 0;
     background-position: center top;
@@ -3231,7 +3228,7 @@ ul.pricing-item-features-list li {
     width: 100%;
     max-width: 100%;
     height: 612px;
-    background-image: url(../images/illustration-section-02.svg);
+    background: transparent;
     background-repeat: no-repeat;
     background-size: auto;
     left: 50%;
