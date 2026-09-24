@@ -41,8 +41,11 @@
                 <div class="container">
                     <div class="hall-header-inner">
                         <a class="hall-mark" href="/">
-                            <img src="../images/logo.svg" alt="Þing" width="34" height="34" />
-                            <span class="hall-word">Þing</span>
+                            <img class="hall-emblem" src="../images/logo.svg" alt="Þing" width="34" height="34" />
+                            <span class="hall-wordmark">
+                                <span class="hall-word">ÞING</span>
+                                <span class="hall-word-sub">The assembly hall</span>
+                            </span>
                         </a>
                         <nav class="hall-nav">
                             <a href="/privacy">Privacy</a>
@@ -56,31 +59,29 @@
                 <!-- The hall's threshold -->
                 <section class="hero">
                     <div class="container">
-                        <div class="hero-inner">
-                            <div class="hero-words">
-                                <p class="hero-eyebrow">The assembly hall of Ymir</p>
-                                <h1 id="appTitle" class="hero-title">Þing<br />Peer-to-peer, private, fast.</h1>
-                                <p id="appDescription" class="hero-deck">
-                                    A room of your own. Start a call in a single click — no download, no plugin, no
-                                    toll booth. Meet, talk, and share your screen while the media flows directly
-                                    between your people.
-                                </p>
-                                <div class="hero-cta">
-                                    <h2 id="appJoinDescription" class="cta-hint">
-                                        Pick a room name.<br />
-                                        How about this one?
-                                    </h2>
-                                    <div class="join-box">
-                                        <label class="screen-reader" for="roomName">room</label>
-                                        <input id="roomName" class="join-input" type="text" value="thing" maxlength="64" placeholder="room-name" autocomplete="off" spellcheck="false" />
-                                        <button id="genRoomButton" class="join-gen" aria-label="Generate a room name">⟳</button>
-                                        <button id="joinRoomButton" class="join-btn">ENTER HALL</button>
-                                        <button id="customizeRoomButton" class="join-custom">CUSTOMIZE ROOM</button>
-                                    </div>
-                                    <div id="lastRoomContainer" class="last-room">
-                                        <span id="appJoinLastRoom">Your recent room:</span>
-                                        <a id="lastRoom"></a>
-                                    </div>
+                        <div class="hero-lore">
+                            <p class="lore-kicker" id="heroEyebrow">The assembly hall of Ymir</p>
+                            <h1 id="appTitle" class="lore-hero">Þing —<br />Peer-to-peer, private, fast.</h1>
+                            <p id="appDescription" class="lore-lede">
+                                A room of your own. Start a call in a single click — no download, no plugin, no
+                                toll booth. Meet, talk, and share your screen while the media flows directly
+                                between your people.
+                            </p>
+                            <div class="join-panel">
+                                <h2 id="appJoinDescription" class="join-hint">
+                                    Pick a room name.<br />
+                                    How about this one?
+                                </h2>
+                                <div class="join-row">
+                                    <label class="screen-reader" for="roomName">room</label>
+                                    <input id="roomName" class="join-input" type="text" value="thing" maxlength="64" placeholder="room-name" autocomplete="off" spellcheck="false" />
+                                    <button id="genRoomButton" class="join-gen" aria-label="Generate a room name">⟳</button>
+                                    <button id="joinRoomButton" class="join-btn">ENTER HALL</button>
+                                    <button id="customizeRoomButton" class="join-custom">CUSTOMIZE ROOM</button>
+                                </div>
+                                <div id="lastRoomContainer" class="last-room">
+                                    <span id="appJoinLastRoom">Your recent room:</span>
+                                    <a id="lastRoom"></a>
                                 </div>
                             </div>
                         </div>
@@ -91,6 +92,7 @@
                 <section id="features" class="features">
                     <div class="container">
                         <div class="features-head">
+                            <p class="lore-kicker">The works of the hall</p>
                             <h2>Rooms without number, calls without a clock</h2>
                             <p>
                                 Þing is forged differently: no heavy server in the middle of your talk. Media flows
