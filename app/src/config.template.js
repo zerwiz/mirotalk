@@ -451,25 +451,25 @@ module.exports = {
      * only need to specify the properties you want to change.
      */
     themes: {
-        /* Ymir look-and-feel: the dark theme wears the Algiz palette.
-           Slate-obsidian grounds, cyan accents, the hall's own skin. */
+        /* Ymir cloth: the dark theme wears stone and bronze (design.md §4).
+           Canvas #0e0c09, bronze #c9973f, bone #cfc3a9. */
         dark: {
-            '--body-bg': 'radial-gradient(#0f172a, #020617)',
-            '--msger-bg': 'radial-gradient(#0f172a, #020617)',
-            '--msger-private-bg': 'radial-gradient(#0f172a, #020617)',
-            '--wb-bg': 'radial-gradient(#0f172a, #020617)',
-            '--elem-border-color': '1px solid rgba(56, 189, 248, 0.18)',
-            '--navbar-bg': 'rgba(2, 6, 23, 0.92)',
-            '--select-bg': '#0f172a',
-            '--tab-btn-active': '#1e293b',
+            '--body-bg': 'radial-gradient(#1a1610, #0e0c09)',
+            '--msger-bg': 'radial-gradient(#151209, #0e0c09)',
+            '--msger-private-bg': 'radial-gradient(#151209, #0e0c09)',
+            '--wb-bg': 'radial-gradient(#151209, #0e0c09)',
+            '--elem-border-color': '1px solid rgba(201, 151, 63, 0.18)',
+            '--navbar-bg': 'rgba(14, 12, 9, 0.92)',
+            '--select-bg': '#151209',
+            '--tab-btn-active': '#221d14',
             '--box-shadow': '0px 4px 12px 0px rgba(0, 0, 0, 0.5)',
-            '--left-msg-bg': '#11262e',
-            '--right-msg-bg': '#0a1f35',
-            '--private-msg-bg': '#0e2540',
-            '--btn-bar-bg-color': '#022c43',
-            '--btn-bar-color': '#e0f2fe',
-            '--btns-bg-color': 'rgba(2, 6, 23, 0.8)',
-            '--dd-color': '#38BDF8',
+            '--left-msg-bg': '#221d14',
+            '--right-msg-bg': '#1a1610',
+            '--private-msg-bg': '#221d14',
+            '--btn-bar-bg-color': '#221d14',
+            '--btn-bar-color': '#cfc3a9',
+            '--btns-bg-color': 'rgba(14, 12, 9, 0.8)',
+            '--dd-color': '#c9973f',
         },
         /* Example: override dark theme background
         dark: {

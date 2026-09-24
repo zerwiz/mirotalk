@@ -1,0 +1,142 @@
+/* ============================================================
+   Þing — the Ymir cloth
+   One look, one source. Values carved from the cloth of the halls:
+   docs/design.md §4 and midgard/design-system/tokens.css.
+   Stone and bone, bronze and blood — the three faces Cormorant /
+   Newsreader / IBM Plex Mono. Loaded last on every surface.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+    /* --- Canvas: the stone --- */
+    --ymir-bg-0: #0e0c09;   /* deepest canvas */
+    --ymir-bg-1: #151209;   /* panel */
+    --ymir-bg-2: #1a1610;   /* elevated, cards */
+    --ymir-bg-3: #221d14;   /* hover, wells */
+
+    /* --- Accents: the bronze light of the forge --- */
+    --ymir-bronze-1: #c9973f; /* primary accent, focus, links */
+    --ymir-bronze-2: #7d5f2a; /* hover / darker accent */
+    --ymir-steel-1: #96a0a8;  /* realm identity, secondary */
+    --ymir-steel-2: #5f686e;  /* steel-dim */
+
+    /* --- Structure: bone and brass --- */
+    --ymir-line-1: #2b241a;   /* borders, bevel exteriors */
+    --ymir-line-2: #7d5f2a;   /* stronger rules, dividers */
+    --ymir-line-3: #9a8f75;   /* secondary text, muted glyphs */
+    --ymir-chisel: #c9973f;   /* the lit chisel edge */
+
+    /* --- Semantics: state of the forge --- */
+    --ymir-ok: #96a0a8;
+    --ymir-warn: #c9973f;
+    --ymir-danger: #c2584a;
+    --ymir-info: #9a8f75;
+
+    /* --- Text on stone --- */
+    --ymir-text-0: #cfc3a9;                        /* bone — primary */
+    --ymir-text-1: rgba(207, 195, 169, 0.82);      /* bone, blunted — secondary */
+    --ymir-text-2: #9a8f75;                        /* bone-dim — tertiary */
+    --ymir-text-3: #6b6250;                        /* bone-faint — placeholder */
+
+    /* --- Type: the three faces --- */
+    --ymir-font-head: 'Cormorant', 'Noto Sans Runic', Georgia, serif;
+    --ymir-font-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', monospace;
+    --ymir-font-body: 'Newsreader', Georgia, 'Noto Sans Runic', serif;
+
+    /* --- Radius (the carved edge) --- */
+    --ymir-radius: 8px;
+    --ymir-radius-panel: 12px;
+}
+
+/* ============ Type faces ============ */
+h1, h2, h3, h4, h5, .section-title, .page-title, .app-title {
+    font-family: var(--ymir-font-head);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+body, p, a, button, input, textarea, select, label, .description {
+    font-family: var(--ymir-font-body);
+}
+
+button, .button, input, textarea, select, .stats, .footer-copyright, code, pre, .about-details {
+    font-family: var(--ymir-font-body);
+}
+
+/* ============ Canvas — the stone ============ */
+body {
+    background: radial-gradient(1200px 800px at 50% -10%, var(--ymir-bg-2), var(--ymir-bg-0));
+    color: var(--ymir-text-0);
+}
+
+#client, .msger, .wb, .chat, .main-panel, .wrapper, .body-wrap, .site-content,
+#root, .container, .panel, .card {
+    background: transparent;
+}
+
+/* ============ Bronze accents ============ */
+a:not(.button):not(.btn):not(.no-cloth) {
+    color: var(--ymir-bronze-1);
+}
+a:not(.button):not(.btn):not(.no-cloth):hover {
+    color: var(--ymir-bronze-2);
+}
+
+.button-primary, .btn-primary, .button.button-primary, button.button-primary,
+.primary-btn {
+    background: linear-gradient(135deg, var(--ymir-bronze-1) 0%, var(--ymir-bronze-2) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 14px rgba(201, 151, 63, 0.30);
+    color: #0e0c09 !important;
+}
+.button-primary:hover, .btn-primary:hover {
+    background: linear-gradient(135deg, var(--ymir-bronze-2) 0%, var(--ymir-bronze-1) 100%);
+    color: #0e0c09 !important;
+}
+
+.button-custom, .button-secondary, .btn-secondary {
+    background: transparent;
+    border: 1px solid var(--ymir-bronze-1);
+    color: var(--ymir-bronze-1);
+}
+.button-custom:hover {
+    background: rgba(201, 151, 63, 0.10);
+    color: var(--ymir-bronze-1);
+}
+
+/* ============ Selection — amber on pale bone ============ */
+::selection {
+    background: #57411a;
+    color: #f0e6cd;
+}
+
+/* ============ Dividers & lines ============ */
+hr, .divider {
+    border-color: var(--ymir-line-1);
+}
+.section-inner.has-top-divider {
+    border-top: 1px solid var(--ymir-line-1);
+}
+.section-inner.has-bottom-divider {
+    border-bottom: 1px solid var(--ymir-line-1);
+}
+
+/* ============ Headers / footers ============ */
+.site-header, .site-footer, .navbar, header {
+    background: rgba(14, 12, 9, 0.85);
+    backdrop-filter: blur(8px);
+    border-color: var(--ymir-line-1);
+}
+
+.footer-copyright {
+    color: var(--ymir-text-2);
+}
+
+/* ============ In-room specials ============ */
+#btn-bar, .btn-bar-bg, .bottom-bar {
+    background: rgba(14, 12, 9, 0.75) !important;
+}
+.dd-color, .accent {
+    color: var(--ymir-bronze-1);
+}
