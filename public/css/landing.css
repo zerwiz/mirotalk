@@ -24,7 +24,7 @@ body {
 #loginForm:hover,
 #loginForm:focus-within {
     box-shadow: 0 12px 40px 0 rgba(70, 120, 249, 0.25);
-    border-color: #376df9;
+    border-color: #0ea5e9;
 }
 
 /* Hidden by default; shown after successful login without a target room */
@@ -41,7 +41,7 @@ body {
 
 #joinRoomForm:focus-within,
 #joinRoomForm:hover {
-    border-color: #376df9;
+    border-color: #0ea5e9;
 }
 
 /* Join Room layout: make JOIN fill the remaining width next to Random */
@@ -348,7 +348,7 @@ html {
 
 body {
     /* background: #16171b; */
-    background: linear-gradient(to left, #171717, #000000);
+    background: radial-gradient(#0f172a, #020617);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
@@ -586,7 +586,7 @@ a.button-link:active {
 }
 
 a.func-link {
-    color: #376df9;
+    color: #0ea5e9;
 }
 
 a.func-link:hover,
@@ -736,7 +736,7 @@ strong {
 
 .invert-color a.button-link:hover,
 .invert-color a.button-link:active {
-    color: #376df9;
+    color: #0ea5e9;
 }
 
 .invert-color a.func-link:hover,
@@ -956,7 +956,7 @@ strong {
 
 .button-primary {
     color: #ffffff;
-    background: linear-gradient(135deg, #376df9 0%, #4678f9 100%);
+    background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 4px 14px rgba(55, 109, 249, 0.35);
     transition:
@@ -966,7 +966,7 @@ strong {
 }
 
 .button-primary:hover {
-    background: linear-gradient(135deg, #4678f9 0%, #5a8aff 100%);
+    background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(55, 109, 249, 0.45);
 }
@@ -1009,11 +1009,11 @@ strong {
     border: 0;
     color: #f9faff !important;
     background-color: #000000;
-    background: linear-gradient(100deg, #376df9 0, #ff5fa0 75%, #ffc55a 100%);
+    background: linear-gradient(100deg, #0ea5e9 0, #ff5fa0 75%, #ffc55a 100%);
 }
 
 .button-custom:hover {
-    background-color: #4678f9;
+    background-color: #38bdf8;
 }
 
 .button-custom.is-loading::after {
@@ -1129,7 +1129,7 @@ fieldset {
 .form-radio input:active,
 .form-radio input:focus {
     outline: none;
-    border-color: #376df9;
+    border-color: #0ea5e9;
 }
 
 .form-input[disabled],
@@ -1302,8 +1302,8 @@ textarea.form-input {
 
 .form-checkbox input:checked,
 .form-radio input:checked {
-    background-color: #376df9 !important;
-    border-color: #376df9 !important;
+    background-color: #0ea5e9 !important;
+    border-color: #0ea5e9 !important;
     background-position: 50%;
 }
 
@@ -1365,7 +1365,7 @@ textarea.form-input {
 }
 
 .form-switch input:checked + .form-switch-icon {
-    background: #376df9;
+    background: #0ea5e9;
 }
 
 .form-switch input:checked + .form-switch-icon::before {
@@ -1403,7 +1403,7 @@ textarea.form-input {
 .invert-color .form-checkbox input:focus,
 .invert-color .form-radio input:active,
 .invert-color .form-radio input:focus {
-    border-color: #376df9;
+    border-color: #0ea5e9;
 }
 
 .invert-color .form-input[disabled],
@@ -1468,7 +1468,7 @@ textarea.form-input {
     -webkit-backdrop-filter: blur(12px);
     border: 2px solid rgba(255, 255, 255, 0.25);
     color: #ffffff;
-    caret-color: #4678f9;
+    caret-color: #38bdf8;
     font-weight: 600;
     letter-spacing: 0.3px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
@@ -1485,7 +1485,7 @@ textarea.form-input {
 }
 
 .room-input-wrap .form-input:focus {
-    border-color: #4678f9;
+    border-color: #38bdf8;
     background-color: rgba(0, 0, 0, 0.55);
     box-shadow:
         0 0 0 3px rgba(70, 120, 249, 0.2),
@@ -1525,20 +1525,20 @@ textarea.form-input {
     outline: none;
     color: #ffffff;
     background: rgba(70, 120, 249, 0.3);
-    border-color: #4678f9;
+    border-color: #38bdf8;
 }
 
 .room-gen-btn:active {
     color: #ffffff;
     background: rgba(70, 120, 249, 0.5);
-    border-color: #4678f9;
+    border-color: #38bdf8;
     transform: translateY(-50%) scale(0.85);
     box-shadow: 0 0 8px rgba(70, 120, 249, 0.4);
 }
 
 .room-gen-btn.spin {
     animation: roomGenSpin 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    color: #4678f9;
+    color: #38bdf8;
 }
 
 @keyframes roomGenSpin {
@@ -1784,7 +1784,7 @@ textarea.form-input {
 .accordion-icon::after {
     content: '';
     position: absolute;
-    background: #376df9;
+    background: #0ea5e9;
     transition: transform 0.25s ease-out;
 }
 
@@ -2042,7 +2042,7 @@ textarea.form-input {
 }
 
 .invert-color .carousel-bullet:hover::before {
-    background: #376df9;
+    background: #0ea5e9;
 }
 
 .split-wrap {
@@ -2511,7 +2511,7 @@ textarea.form-input {
 }
 
 .footer-social a svg {
-    fill: #376df9;
+    fill: #0ea5e9;
     transition: fill 0.15s ease;
 }
 
@@ -3248,7 +3248,7 @@ ul.pricing-item-features-list li {
     display: inline-flex;
     padding: 1rem;
     border-radius: 1rem;
-    background: radial-gradient(circle at bottom, #376df9 0%, #ff79af 50%, #ff8d74 100%);
+    background: radial-gradient(circle at bottom, #0ea5e9 0%, #ff79af 50%, #ff8d74 100%);
 }
 
 .pricing .tiles-item-inner {
@@ -3364,11 +3364,11 @@ ul.pricing-item-features-list li.is-checked::after {
 }
 
 .testimonial-item-link {
-    color: #376df9;
+    color: #0ea5e9;
 }
 
 .testimonial-item-link a {
-    color: #376df9;
+    color: #0ea5e9;
     text-decoration: none;
 }
 
@@ -3384,8 +3384,8 @@ ul.pricing-item-features-list li.is-checked::after {
 .cta-inner {
     padding-left: 16px;
     padding-right: 16px;
-    background-color: #376df9;
-    background: linear-gradient(100deg, #376df9 0, #ff5fa0 75%, #ffc55a 100%);
+    background-color: #0ea5e9;
+    background: linear-gradient(100deg, #0ea5e9 0, #ff5fa0 75%, #ffc55a 100%);
 }
 
 @media (min-width: 641px) {
@@ -3460,7 +3460,7 @@ ul.pricing-item-features-list li.is-checked::after {
 }
 
 .text-color-primary {
-    color: #376df9;
+    color: #0ea5e9;
 }
 
 .text-color-secondary {
@@ -4084,7 +4084,7 @@ img.has-shadow {
 html,
 body {
     scrollbar-width: thin;
-    scrollbar-color: #4678f9 #1a1b1f;
+    scrollbar-color: #38bdf8 #1a1b1f;
 }
 
 /* Target the scrollbar track */
@@ -4095,14 +4095,14 @@ body {
 
 /* Target the scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-    background: #4678f9;
+    background: #38bdf8;
     border-radius: 8px; /* rounded corners for the thumb */
     cursor: pointer;
 }
 
 /* Target the scrollbar track when the thumb is being hovered */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #376df9; /* color of the thumb on hover */
+    background-color: #0ea5e9; /* color of the thumb on hover */
 }
 
 /* Target the scrollbar track when the scrollbar is being hovered */
@@ -4150,7 +4150,7 @@ body {
 
 .last-room a:hover {
     background-color: rgba(70, 120, 249, 0.15);
-    color: #4678f9;
+    color: #38bdf8;
     transition: all 0.2s ease;
 }
 
@@ -4486,8 +4486,8 @@ body {
     --landing-border-hover: rgba(70, 120, 249, 0.42);
     --landing-text: #f4f7fb;
     --landing-text-muted: #959cb1;
-    --landing-primary: #376df9;
-    --landing-primary-bright: #4678f9;
+    --landing-primary: #0ea5e9;
+    --landing-primary-bright: #38bdf8;
     --landing-secondary: #ff5fa0;
     --landing-accent: #ffc55a;
 }

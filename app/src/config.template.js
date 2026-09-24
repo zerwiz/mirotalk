@@ -451,6 +451,26 @@ module.exports = {
      * only need to specify the properties you want to change.
      */
     themes: {
+        /* Ymir look-and-feel: the dark theme wears the Algiz palette.
+           Slate-obsidian grounds, cyan accents, the hall's own skin. */
+        dark: {
+            '--body-bg': 'radial-gradient(#0f172a, #020617)',
+            '--msger-bg': 'radial-gradient(#0f172a, #020617)',
+            '--msger-private-bg': 'radial-gradient(#0f172a, #020617)',
+            '--wb-bg': 'radial-gradient(#0f172a, #020617)',
+            '--elem-border-color': '1px solid rgba(56, 189, 248, 0.18)',
+            '--navbar-bg': 'rgba(2, 6, 23, 0.92)',
+            '--select-bg': '#0f172a',
+            '--tab-btn-active': '#1e293b',
+            '--box-shadow': '0px 4px 12px 0px rgba(0, 0, 0, 0.5)',
+            '--left-msg-bg': '#11262e',
+            '--right-msg-bg': '#0a1f35',
+            '--private-msg-bg': '#0e2540',
+            '--btn-bar-bg-color': '#022c43',
+            '--btn-bar-color': '#e0f2fe',
+            '--btns-bg-color': 'rgba(2, 6, 23, 0.8)',
+            '--dd-color': '#38BDF8',
+        },
         /* Example: override dark theme background
         dark: {
             '--body-bg': 'radial-gradient(#1a1a2e, #0a0a14)',
