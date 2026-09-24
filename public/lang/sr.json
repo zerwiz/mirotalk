@@ -566,7 +566,6 @@
         "Create": "Napravi",
         "Create Sticky Note": "Napravi lepljivu belešku",
         "Delete this messages?": "Избрисати ове поруке?",
-        "Do you want to rate your MiroTalk experience?": "Želite li da ocenite svoje iskustvo sa MiroTalk-om?",
         "Do you want to share your screen?": "Želite li da podelite svoj ekran?",
         "Eject everyone except yourself?": "Избацити све осим себе?",
         "Email invite": "Позив е-поштом",
@@ -636,7 +635,8 @@
         "Transcription needs your microphone on to capture your speech. Turn it on to start transcribing.": "Transcription needs your microphone on to capture your speech. Turn it on to start transcribing.",
         "Turn on microphone": "Turn on microphone",
         "Unlock room": "Unlock room",
-        "Your microphone is off": "Your microphone is off"
+        "Your microphone is off": "Your microphone is off",
+        "Do you want to rate your Þing experience?": "Želite li da ocenite svoje iskustvo sa Þing-om?"
     },
     "toasts": {
         "Select a grouped object to ungroup.": "Izaberite grupisani objekat za razgrupisavanje.",

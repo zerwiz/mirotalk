@@ -21,13 +21,13 @@ class HtmlInjector {
     getInjectData() {
         return {
             OG_TYPE: this.config?.og?.type || 'app-webrtc',
-            OG_SITE_NAME: this.config?.og?.siteName || 'MiroTalk',
-            OG_TITLE: this.config?.og?.title || 'MiroTalk P2P - Open Source WebRTC Video Calls & Meetings',
+            OG_SITE_NAME: this.config?.og?.siteName || 'Ymir · Þing',
+            OG_TITLE: this.config?.og?.title || 'Þing — the assembly hall of Ymir',
             OG_DESCRIPTION:
                 this.config?.og?.description ||
-                'MiroTalk P2P is an open-source self-hosted WebRTC video calling and meeting platform. Create fast peer-to-peer video calls with screen sharing, chat, whiteboard and collaboration directly in the browser.',
-            OG_IMAGE: this.config?.og?.image || 'https://p2p.mirotalk.com/images/preview.png',
-            OG_URL: this.config?.og?.url || 'https://p2p.mirotalk.com',
+                'Þing — peer-to-peer video rooms of your own, media flowing directly between participants.',
+            OG_IMAGE: this.config?.og?.image || '../images/logo.svg',
+            OG_URL: this.config?.og?.url || '',
             // Add more data here as needed with fallbacks
         };
     }
