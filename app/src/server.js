@@ -896,7 +896,7 @@ app.get('/:roomId', (req, res) => {
 });
 
 /**
-    MiroTalk API v1
+    Þing API v1 — the assembly hall of Ymir
     For api docs we use: https://swagger.io/
 */
 

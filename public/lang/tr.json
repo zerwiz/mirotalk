@@ -566,7 +566,6 @@
         "Create": "Oluştur",
         "Create Sticky Note": "Yapışkan not oluştur",
         "Delete this messages?": "Bu mesajlar silinsin mi?",
-        "Do you want to rate your MiroTalk experience?": "MiroTalk deneyiminizi değerlendirmek ister misiniz?",
         "Do you want to share your screen?": "Ekranınızı paylaşmak ister misiniz?",
         "Eject everyone except yourself?": "Kendin dışında herkesi mi çıkaracaksın?",
         "Email invite": "E-posta daveti",
@@ -636,7 +635,8 @@
         "Transcription needs your microphone on to capture your speech. Turn it on to start transcribing.": "Transcription needs your microphone on to capture your speech. Turn it on to start transcribing.",
         "Turn on microphone": "Turn on microphone",
         "Unlock room": "Unlock room",
-        "Your microphone is off": "Your microphone is off"
+        "Your microphone is off": "Your microphone is off",
+        "Do you want to rate your Þing experience?": "Þing deneyiminizi değerlendirmek ister misiniz?"
     },
     "toasts": {
         "Select a grouped object to ungroup.": "Grubunu çözmek için gruplanmış bir nesne seçin.",

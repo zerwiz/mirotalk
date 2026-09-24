@@ -55,86 +55,65 @@ let brand = {
     app: {
         language: 'en',
         translationMode: 'google',
-        name: 'MiroTalk',
-        title: 'MiroTalk<br />Free browser based Real-time video calls.<br />Simple, Secure, Fast.',
+        name: 'Þing',
+        title: 'Þing<br />The assembly hall of Ymir.<br />Peer-to-peer, private, fast.',
         description:
-            'Start your next video call with a single click. No download, plug-in, or login is required. Just get straight to talking, messaging, and sharing your screen.',
+            'A room of your own. Start a call in a single click — no download, no plugin, no toll booth. Meet, talk, and share your screen while the media flows directly between your people.',
         joinDescription: 'Pick a room name.<br />How about this one?',
-        joinButtonLabel: 'JOIN ROOM',
+        joinButtonLabel: 'ENTER HALL',
         customizeRoomButtonLabel: 'CUSTOMIZE ROOM',
         joinLastLabel: 'Your recent room:',
     },
     site: {
         shortcutIcon: '../images/logo.svg',
         appleTouchIcon: '../images/logo.svg',
-        landingTitle: 'MiroTalk P2P - Open Source WebRTC Video Calls & Meetings',
-        newCallTitle: 'MiroTalk a Free Secure Video Calls, Chat & Screen Sharing.',
-        newCallRoomTitle: 'Pick name. <br />Share URL. <br />Start conference.',
+        landingTitle: 'Þing — the assembly hall of Ymir',
+        newCallTitle: 'Þing — a room of your own',
+        newCallRoomTitle: 'Pick a name. <br />Share the link. <br />The hall opens.',
         newCallRoomDescription:
-            "Each room has its disposable URL. Just pick a room name and share your custom URL. It's that easy.",
-        loginTitle: 'MiroTalk - Host Protected login required.',
-        loginHeading: 'Welcome back',
-        loginDescription: 'Enter your credentials to continue.',
-        loginButtonLabel: 'Login',
-        joinRoomTitle: 'Pick name.<br />Share URL.<br />Start conference.',
-        joinRoomButtonLabel: 'JOIN ROOM',
-        clientTitle: 'MiroTalk WebRTC Video call, Chat Room & Screen Sharing.',
-        privacyPolicyTitle: 'MiroTalk - privacy and policy.',
-        stunTurnTitle: 'Test Stun/Turn Servers.',
-        notFoundTitle: 'MiroTalk - 404 Page not found.',
-        waitingRoomTitle: 'MiroTalk - Waiting for host to start the meeting',
-        waitingRoomHeading: 'Waiting for host...',
+            "Every room carries its own disposable URL. Pick a name, share it, and the hall opens — that's all it takes.",
+        loginTitle: 'Þing — the door is guarded',
+        loginHeading: 'Welcome',
+        loginDescription: 'Enter your mark to step into the hall.',
+        loginButtonLabel: 'Enter',
+        joinRoomTitle: 'Pick a name.<br />Share the link.<br />The hall opens.',
+        joinRoomButtonLabel: 'ENTER HALL',
+        clientTitle: 'Þing — assembly hall of Ymir · Video, Chat & Screen Sharing',
+        privacyPolicyTitle: 'Þing — privacy and the law',
+        stunTurnTitle: 'Test STUN/TURN servers',
+        notFoundTitle: 'Þing — nothing here',
+        waitingRoomTitle: 'Þing — awaiting the host',
+        waitingRoomHeading: 'Awaiting the host…',
         waitingRoomDescription:
-            "The meeting hasn't started yet.<br />You'll join automatically when the host opens the room.",
-        waitingRoomStatus: 'Checking room status...',
-        waitingRoomReady: 'Room is ready! Joining...',
-        waitingRoomWaiting: 'Waiting for host to start the meeting...',
+            "The hall hasn't opened yet.<br />You'll enter when the host opens the room.",
+        waitingRoomStatus: 'Sounding the hall…',
+        waitingRoomReady: 'The hall is open! Entering…',
+        waitingRoomWaiting: 'Awaiting the host…',
         waitingRoomHostLink: 'Are you the host?',
-        waitingRoomLoginLink: 'Login here',
-        waitingRoomElapsedJust: 'Just started waiting',
-        waitingRoomElapsedMinutes: 'Waiting for {minutes}',
+        waitingRoomLoginLink: 'Enter here',
+        waitingRoomElapsedJust: 'Just began awaiting',
+        waitingRoomElapsedMinutes: 'Awaiting {minutes}',
         waitingRoomSongUrl: '',
     },
     html: {
-        topSponsors: true,
+        topSponsors: false,
         features: true,
-        teams: true, // please keep me always true ;)
-        tryEasier: true,
-        poweredBy: true,
-        sponsors: true,
-        pastSponsors: true,
-        advertisers: true,
-        supportUs: true,
+        teams: false,
+        tryEasier: false,
+        poweredBy: false,
+        sponsors: false,
+        pastSponsors: false,
+        advertisers: false,
+        supportUs: false,
         footer: true,
     },
     about: {
-        imageUrl: '../images/mirotalk-logo.gif',
-        title: 'WebRTC P2P v1.9.99',
+        imageUrl: '../images/logo.svg',
+        title: 'Þing — the assembly hall of Ymir',
         html: `
-            <button 
-                id="support-button" 
-                data-umami-event="Support button" 
-                onclick="window.open('https://codecanyon.net/user/miroslavpejic85')">
-                <i class="fas fa-heart" ></i>&nbsp;Support
-            </button>
-            <br /><br /><br />
-            Author:<a 
-                id="linkedin-button" 
-                data-umami-event="Linkedin button" 
-                href="https://www.linkedin.com/in/miroslav-pejic-976a07101/" target="_blank"> 
-                Miroslav Pejic
-            </a>
-            <br /><br />
-            Email:<a 
-                id="email-button" 
-                data-umami-event="Email button" 
-                href="mailto:miroslav.pejic.85@gmail.com?subject=MiroTalk P2P info"> 
-                miroslav.pejic.85@gmail.com
-            </a>
-            <br /><br />
-            <hr />
-            <span>&copy; 2025 MiroTalk P2P, all rights reserved</span>
-            <hr />
+            <footer class="about-footer">
+                &copy; ${new Date().getFullYear()} Ymir — Þing. All rights reserved.
+            </footer>
         `,
     },
     widget: {
@@ -145,9 +124,7 @@ let brand = {
         widgetType: 'support',
         supportWidget: {
             position: 'top-right',
-            expertImages: [
-                'https://photo.cloudron.pocketsolution.net/uploads/original/95/7d/a5f7f7a2c89a5fee7affda5f013c.jpeg',
-            ],
+            expertImages: [],
             buttons: {
                 audio: true,
                 video: true,
@@ -158,12 +135,12 @@ let brand = {
             checkOnlineStatus: false,
             isOnline: true,
             customMessages: {
-                heading: 'Need Help?',
-                subheading: 'Get instant support from our expert team!',
+                heading: 'Need help?',
+                subheading: 'Ask the ravens of the hall.',
                 connectText: 'connect in < 5 seconds',
-                onlineText: 'We are online',
-                offlineText: 'We are offline',
-                poweredBy: 'Powered by MiroTalk',
+                onlineText: 'The hall is open',
+                offlineText: 'The hall is shut',
+                poweredBy: 'Powered by Ymir · Þing',
             },
         },
     },

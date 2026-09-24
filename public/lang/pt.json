@@ -566,7 +566,6 @@
         "Create": "Criar",
         "Create Sticky Note": "Criar nota adesiva",
         "Delete this messages?": "Excluir esta mensagem?",
-        "Do you want to rate your MiroTalk experience?": "Deseja avaliar sua experiência com o MiroTalk?",
         "Do you want to share your screen?": "Deseja compartilhar sua tela?",
         "Eject everyone except yourself?": "Ejetar todos, exceto você?",
         "Email invite": "Convite por e-mail",
@@ -636,7 +635,8 @@
         "Transcription needs your microphone on to capture your speech. Turn it on to start transcribing.": "Transcription needs your microphone on to capture your speech. Turn it on to start transcribing.",
         "Turn on microphone": "Turn on microphone",
         "Unlock room": "Unlock room",
-        "Your microphone is off": "Your microphone is off"
+        "Your microphone is off": "Your microphone is off",
+        "Do you want to rate your Þing experience?": "Deseja avaliar sua experiência com o Þing?"
     },
     "toasts": {
         "Select a grouped object to ungroup.": "Selecione um objeto agrupado para desagrupar.",

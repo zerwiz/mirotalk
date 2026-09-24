@@ -566,7 +566,6 @@
         "Create": "作成",
         "Create Sticky Note": "付箋を作成",
         "Delete this messages?": "このメッセージを削除しますか?",
-        "Do you want to rate your MiroTalk experience?": "MiroTalk の体験を評価しますか？",
         "Do you want to share your screen?": "画面を共有しますか？",
         "Eject everyone except yourself?": "自分以外の全員を退場させますか？",
         "Email invite": "メールでの招待",
@@ -636,7 +635,8 @@
         "Transcription needs your microphone on to capture your speech. Turn it on to start transcribing.": "Transcription needs your microphone on to capture your speech. Turn it on to start transcribing.",
         "Turn on microphone": "Turn on microphone",
         "Unlock room": "Unlock room",
-        "Your microphone is off": "Your microphone is off"
+        "Your microphone is off": "Your microphone is off",
+        "Do you want to rate your Þing experience?": "Þing の体験を評価しますか？"
     },
     "toasts": {
         "Select a grouped object to ungroup.": "グループ化を解除するオブジェクトを選択してください。",

@@ -566,7 +566,6 @@
         "Create": "إنشاء",
         "Create Sticky Note": "إنشاء ملاحظة لاصقة",
         "Delete this messages?": "هل تريد حذف هذه الرسائل؟",
-        "Do you want to rate your MiroTalk experience?": "هل تريد تقييم تجربتك مع MiroTalk؟",
         "Do you want to share your screen?": "هل تريد مشاركة شاشتك؟",
         "Eject everyone except yourself?": "طرد الجميع باستثناء نفسك؟",
         "Email invite": "دعوة بالبريد الإلكتروني",
@@ -636,7 +635,8 @@
         "Transcription needs your microphone on to capture your speech. Turn it on to start transcribing.": "Transcription needs your microphone on to capture your speech. Turn it on to start transcribing.",
         "Turn on microphone": "Turn on microphone",
         "Unlock room": "Unlock room",
-        "Your microphone is off": "Your microphone is off"
+        "Your microphone is off": "Your microphone is off",
+        "Do you want to rate your Þing experience?": "هل تريد تقييم تجربتك مع Þing؟"
     },
     "toasts": {
         "Select a grouped object to ungroup.": "حدد كائنًا مجمعًا لفك تجميعه.",

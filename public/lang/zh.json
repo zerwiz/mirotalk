@@ -566,7 +566,6 @@
         "Create": "创建",
         "Create Sticky Note": "创建便签",
         "Delete this messages?": "删除此消息吗？",
-        "Do you want to rate your MiroTalk experience?": "您想为您的 MiroTalk 体验评分吗？",
         "Do you want to share your screen?": "您想分享您的屏幕吗？",
         "Eject everyone except yourself?": "驱逐除了你自己之外的所有人？",
         "Email invite": "电子邮件邀请",
@@ -636,7 +635,8 @@
         "Transcription needs your microphone on to capture your speech. Turn it on to start transcribing.": "Transcription needs your microphone on to capture your speech. Turn it on to start transcribing.",
         "Turn on microphone": "Turn on microphone",
         "Unlock room": "Unlock room",
-        "Your microphone is off": "Your microphone is off"
+        "Your microphone is off": "Your microphone is off",
+        "Do you want to rate your Þing experience?": "您想为您的 Þing 体验评分吗？"
     },
     "toasts": {
         "Select a grouped object to ungroup.": "请选择一个已组合的对象以取消组合。",
