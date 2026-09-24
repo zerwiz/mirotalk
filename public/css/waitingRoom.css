@@ -30,7 +30,7 @@
 }
 .waiting-icon i {
     font-size: 24px;
-    color: #4678f9;
+    color: #38bdf8;
 }
 @keyframes iconPulse {
     0%,
@@ -69,7 +69,7 @@
 .waiting-spinner-dot {
     width: 10px;
     height: 10px;
-    background-color: #4678f9;
+    background-color: #38bdf8;
     border-radius: 50%;
     animation: bounce 1.4s ease-in-out infinite both;
 }
@@ -141,7 +141,7 @@
 .waiting-audio-btn {
     background: none;
     border: none;
-    color: #4678f9;
+    color: #38bdf8;
     font-size: 16px;
     cursor: pointer;
     padding: 4px;
@@ -149,7 +149,7 @@
     flex-shrink: 0;
 }
 .waiting-audio-btn:hover {
-    color: #5a8aff;
+    color: #38bdf8;
 }
 .waiting-audio-bar {
     flex: 1;
@@ -161,7 +161,7 @@
 .waiting-audio-progress {
     height: 100%;
     width: 0;
-    background: #4678f9;
+    background: #38bdf8;
     border-radius: 4px;
     transition: width 0.3s linear;
 }
@@ -180,13 +180,13 @@
     margin: 0;
 }
 .host-login-link a {
-    color: #4678f9;
+    color: #38bdf8;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s ease;
 }
 .host-login-link a:hover {
-    color: #5a8aff;
+    color: #38bdf8;
     text-decoration: underline;
 }
 

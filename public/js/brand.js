@@ -1,7 +1,7 @@
 'use strict';
 
 // Brand
-const brandDataKey = 'brandDataP2P';
+const brandDataKey = 'thingBrandData';
 const brandData = window.sessionStorage.getItem(brandDataKey);
 
 // Html pages
