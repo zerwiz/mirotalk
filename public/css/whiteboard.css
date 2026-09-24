@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 #whiteboard {
-    --wb-accent: var(--room-switch-accent, #38bdf8);
+    --wb-accent: var(--room-switch-accent, #c9973f);
     --wb-toolbar-surface: rgba(18, 18, 21, 0.88);
     --wb-control-surface: rgba(255, 255, 255, 0.06);
     z-index: 13;

@@ -44,7 +44,7 @@
     --bottom-btns-flex-direction: row;
 
     /* dark theme fallback (default) */
-    --body-bg: radial-gradient(#0f172a, #020617);
+    --body-bg: radial-gradient(#0e0c09, #0e0c09);
     --msger-bg: radial-gradient(#2a2a2e, #121214);
     --msger-private-bg: radial-gradient(#2a2a2e, #121214);
     --wb-bg: radial-gradient(#2a2a2e, #121214);
@@ -59,7 +59,7 @@
     --btn-bar-bg-color: #e8e8ec;
     --btn-bar-color: #121214;
     --btns-bg-color: rgba(18, 18, 20, 0.75);
-    --dd-color: #38bdf8;
+    --dd-color: #c9973f;
     --toggle-off-bg: #000000;
     --toggle-on-bg: green;
     --toggle-off-ink: #ffffff;
@@ -671,13 +671,13 @@ body {
 /* Active state for chat / participants toolbar buttons (theme-aware) */
 #bottomButtons #chatRoomBtn.is-active,
 #bottomButtons #participantsBtn.is-active {
-    background: color-mix(in srgb, var(--dd-color, #38bdf8) 18%, transparent) !important;
-    box-shadow: inset 0 0 0 1px var(--dd-color, #38bdf8);
-    color: var(--dd-color, #38bdf8) !important;
+    background: color-mix(in srgb, var(--dd-color, #c9973f) 18%, transparent) !important;
+    box-shadow: inset 0 0 0 1px var(--dd-color, #c9973f);
+    color: var(--dd-color, #c9973f) !important;
 }
 #bottomButtons #chatRoomBtn.is-active:hover,
 #bottomButtons #participantsBtn.is-active:hover {
-    background: color-mix(in srgb, var(--dd-color, #38bdf8) 28%, transparent) !important;
+    background: color-mix(in srgb, var(--dd-color, #c9973f) 28%, transparent) !important;
 }
 
 /* Quick device picker (Start Audio/Video) */
@@ -3068,7 +3068,7 @@ button {
 /* Emoji Picker (Room) */
 
 .roomEmoji {
-    --room-emoji-accent: var(--room-switch-accent, var(--dd-color, #38bdf8));
+    --room-emoji-accent: var(--room-switch-accent, var(--dd-color, #c9973f));
     --room-emoji-toolbar-surface: rgba(18, 18, 21, 0.88);
     --room-emoji-control-surface: rgba(255, 255, 255, 0.06);
     z-index: 18;
@@ -5452,7 +5452,7 @@ input:checked + .slider:before {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     color: #ffffff;
-    background: #0ea5e9;
+    background: #c9973f;
     font-size: 1rem;
     font-weight: 600;
     transition:
@@ -5480,7 +5480,7 @@ input:checked + .slider:before {
     border: none;
     border-radius: 8px;
     color: #ffffff;
-    background: linear-gradient(65deg, #0ea5e9 0, #ff5fa0 100%);
+    background: linear-gradient(65deg, #c9973f 0, #ff5fa0 100%);
     font-size: 1.2rem;
     transition: background 0.23s;
     cursor: pointer;
