@@ -442,6 +442,9 @@ const switchShortcuts = getId('switchShortcuts');
 const micOptionsDiv = getId('micOptionsDiv');
 const switchNoiseSuppression = getId('switchNoiseSuppression');
 const labelNoiseSuppression = getId('labelNoiseSuppression');
+const videoSkinBtn = getId('videoSkinBtn');
+const switchVideoSkin = getId('switchVideoSkin');
+const labelVideoSkin = getId('labelVideoSkin');
 
 // Tab Media
 const shareMediaAudioVideoBtn = getId('shareMediaAudioVideoBtn');
@@ -670,6 +673,7 @@ let localScreenDisplayStream; // raw getDisplayMedia stream (may include audio)
 let screenShareAudioContext; // AudioContext used to mix screen audio + microphone
 let localAudioMediaStream; // my microphone
 let noiseProcessor = null; // RNNoise audio processing
+let thingBackground = null; // MediaPipe video skin (open-source effects)
 let peerScreenMediaElements = {}; // keep track of our peer <video> tags, indexed by peer_id_screen
 let peerVideoMediaElements = {}; // keep track of our peer <video> tags, indexed by peer_id_video
 let peerAudioMediaElements = {}; // keep track of our peer <audio> tags, indexed by peer_id_audio
@@ -1857,6 +1861,11 @@ function handleButtonsRule() {
             display: buttons.settings.customNoiseSuppression && isRNNoiseSupported,
             mode: 'table-row',
         },
+        {
+            element: videoSkinBtn,
+            display: typeof ThingBackground !== 'undefined',
+            mode: 'table-row',
+        },
     ]);
 
     updateJoinLockButtons();
@@ -2651,6 +2660,8 @@ function handleRNNoiseNotSupported() {
     lS.setSettings(lsSettings);
     // Hide the custom noise suppression toggle in audio settings
     elemDisplay(noiseSuppressionBtn, false);
+    // The video skin rides the same availability rail
+    if (videoSkinBtn && typeof ThingBackground === 'undefined') elemDisplay(videoSkinBtn, false);
 }
 
 /**
@@ -2751,7 +2762,6 @@ async function restartNoiseSuppression() {
  */
 async function applyNoiseSuppression(enabled) {
     if (!buttons.settings.customNoiseSuppression) return false;
-
     if (enabled) {
         lsSettings.mic_noise_suppression = true;
         lS.setSettings(lsSettings);
@@ -2772,6 +2782,59 @@ async function applyNoiseSuppression(enabled) {
 
     syncNoiseSuppressionUI();
     return lsSettings.mic_noise_suppression;
+}
+
+/**
+ * Apply the video skin (MediaPipe virtual background / blur) — the hall's
+ * open-source effects rail, sibling to RNNoise.
+ * @param {boolean} enabled
+ * @returns {Promise<boolean>}
+ */
+async function applyVideoSkin(enabled) {
+    if (typeof ThingBackground === 'undefined') {
+        toastMessage('warning', 'Video effects are not available in this browser.');
+        return false;
+    }
+
+    if (enabled) {
+        if (!localVideoMediaStream || localVideoMediaStream.getVideoTracks().length === 0) {
+            toastMessage('warning', 'No camera stream to skin.');
+            return false;
+        }
+        try {
+            thingBackground = new ThingBackground();
+            const skinned = await thingBackground.start(localVideoMediaStream);
+            if (!skinned || skinned.getVideoTracks().length === 0) {
+                toastMessage('warning', 'Video effects could not start on this device.');
+                thingBackground = null;
+                return false;
+            }
+            localVideoMediaStream = skinned;
+            if (myVideo) myVideo.srcObject = skinned;
+            await refreshMyStreamToPeers(skinned);
+            toastMessage('success', 'The hall wears its skin — background set');
+        } catch (err) {
+            console.error('applyVideoSkin error:', err);
+            toastMessage('error', 'Video effects failed: ' + err.message);
+            thingBackground = null;
+            return false;
+        }
+        return true;
+    }
+
+    // off: stop the skin, hand the raw camera back
+    if (thingBackground) {
+        const raw = thingBackground.originalRawStream;
+        thingBackground.stop();
+        thingBackground = null;
+        if (raw && raw.getVideoTracks().length) {
+            localVideoMediaStream = raw;
+            if (myVideo) myVideo.srcObject = raw;
+            await refreshMyStreamToPeers(raw);
+        }
+    }
+    toastMessage('info', 'The skin is lifted — raw camera again');
+    return false;
 }
 
 /**
@@ -8442,6 +8505,14 @@ function setupMySettings() {
         if (!buttons.settings.customNoiseSuppression) return;
         await applyNoiseSuppression(e.currentTarget.checked);
         switchNoiseSuppression.blur();
+    };
+
+    // video skin (open-source effects rail)
+    switchVideoSkin.onchange = async (e) => {
+        if (!buttons.settings.showMySettingsBtn) return;
+        elemDisplay(videoSkinBtn, true);
+        await applyVideoSkin(e.currentTarget.checked);
+        switchVideoSkin.blur();
     };
 
     // select audio output

@@ -1,5 +1,9 @@
 'use strict';
 
+// Expose the processor globally: client.js checks `typeof RNNoiseProcessor`
+// and instantiates it for the hall's noise-suppression toggle.
+if (typeof window !== 'undefined') window.RNNoiseProcessor = null;
+
 // Handle UI updates and interactions
 class UIManager {
     constructor(elements) {
@@ -286,3 +290,7 @@ class RNNoiseProcessor {
         this.uiManager.updateUI(this.isProcessing, this.noiseSuppressionEnabled);
     }
 }
+
+// Global hand-off — this file is loaded before client.js, which does
+// `new RNNoiseProcessor()` and `RNNoiseProcessor.isSupported()` directly.
+if (typeof window !== 'undefined') window.RNNoiseProcessor = RNNoiseProcessor;
