@@ -18,6 +18,11 @@ class HtmlInjector {
     }
 
     // Function to get dynamic data for injection (e.g., OG data, title, etc.)
+    //
+    // The image and the address fall back to ABSOLUTE values, never to a relative
+    // path: a crawler reading `og:image` has not fetched the page and cannot
+    // resolve `../images/logo.svg` — it simply finds no card. The dimensions and
+    // the type are declared so a crawler can lay the card out before it arrives.
     getInjectData() {
         return {
             OG_TYPE: this.config?.og?.type || 'app-webrtc',
@@ -26,8 +31,15 @@ class HtmlInjector {
             OG_DESCRIPTION:
                 this.config?.og?.description ||
                 'Þing — peer-to-peer video rooms of your own, media flowing directly between participants.',
-            OG_IMAGE: this.config?.og?.image || '../images/logo.svg',
-            OG_URL: this.config?.og?.url || '',
+            OG_IMAGE: this.config?.og?.image || 'https://ping.zerwiz.org/images/thing-og.jpg',
+            OG_IMAGE_ALT:
+                this.config?.og?.imageAlt ||
+                'Þing — the assembly hall of Ymir. Peer-to-peer video rooms of your own.',
+            OG_IMAGE_TYPE: this.config?.og?.imageType || 'image/jpeg',
+            OG_IMAGE_WIDTH: this.config?.og?.imageWidth || 1200,
+            OG_IMAGE_HEIGHT: this.config?.og?.imageHeight || 630,
+            OG_LOCALE: this.config?.og?.locale || 'en_GB',
+            OG_URL: this.config?.og?.url || 'https://ping.zerwiz.org/',
             // Add more data here as needed with fallbacks
         };
     }

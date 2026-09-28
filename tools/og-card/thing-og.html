@@ -1,0 +1,229 @@
+<!doctype html>
+<!--
+  Þing — the social card (Open Graph).
+
+  1200×630, the size every crawler crops to. The composition mirrors the house's
+  other cards (apps/hlidskjalf/public/og.svg): the mark left, the wordmark right,
+  the mono details, one bronze rule, a dim footer. The cloth is the HALL's own —
+  stone and bronze, Cormorant / Newsreader / IBM Plex Mono — so the card looks
+  like the page it links to, which is the only thing an OG card is for.
+
+  Rendered by tools/og-card/render.sh into public/images/thing-og.png|.jpg.
+  Edit THIS file, not the raster: the PNG is a build artifact.
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800&family=IBM+Plex+Mono:wght@300;400;500;600&family=Noto+Sans+Runic&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            /* The hall's cloth, values carved from public/css/cloth.css */
+            :root {
+                --stone-0: #0e0c09;
+                --stone-1: #151209;
+                --stone-2: #1a1610;
+                --bronze: #c9973f;
+                --bronze-dim: #7d5f2a;
+                --line-1: #2b241a;
+                --bone: #cfc3a9;
+                --bone-dim: #9a8f75;
+                --bone-faint: #6b6250;
+                --head: 'Cormorant', Georgia, 'Times New Roman', serif;
+                --body: 'Newsreader', Georgia, serif;
+                --mono: 'IBM Plex Mono', ui-monospace, monospace;
+                --runic: 'Noto Sans Runic', var(--mono);
+            }
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                width: 1200px;
+                height: 630px;
+                overflow: hidden;
+                background: var(--stone-0);
+            }
+            .card {
+                position: relative;
+                width: 1200px;
+                height: 630px;
+                background: linear-gradient(150deg, var(--stone-0) 0%, var(--stone-1) 55%, var(--stone-2) 100%);
+            }
+            /* the grid — 48px, as on the house's card */
+            .grid {
+                position: absolute;
+                inset: 0;
+                background-image:
+                    linear-gradient(to right, var(--line-1) 1px, transparent 1px),
+                    linear-gradient(to bottom, var(--line-1) 1px, transparent 1px);
+                background-size: 48px 48px;
+                opacity: 0.55;
+            }
+            /* the bronze light of the forge, behind the mark */
+            .glow {
+                position: absolute;
+                left: -140px;
+                top: -80px;
+                width: 820px;
+                height: 820px;
+                background: radial-gradient(
+                    circle at 50% 50%,
+                    rgba(201, 151, 63, 0.22) 0%,
+                    rgba(201, 151, 63, 0.07) 45%,
+                    rgba(201, 151, 63, 0) 70%
+                );
+            }
+            .edge-top {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 1200px;
+                height: 6px;
+                background: linear-gradient(90deg, var(--bronze) 0%, var(--bronze-dim) 60%, var(--line-1) 100%);
+            }
+            .edge-bottom {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 1200px;
+                height: 6px;
+                background: var(--line-1);
+            }
+            .mark {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .block {
+                position: absolute;
+                left: 612px;
+                top: 0;
+            }
+            .wordmark {
+                font-family: var(--head);
+                font-weight: 600;
+                font-size: 104px;
+                line-height: 1;
+                letter-spacing: 14px;
+                color: var(--bone);
+                white-space: nowrap;
+            }
+            .sub {
+                font-family: var(--mono);
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 1;
+                letter-spacing: 13px;
+                color: var(--bronze);
+                white-space: nowrap;
+            }
+            .tagline {
+                font-family: var(--mono);
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 1;
+                color: var(--bone-dim);
+                white-space: nowrap;
+            }
+            .body {
+                font-family: var(--mono);
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 28px;
+                color: var(--bone-faint);
+                white-space: nowrap;
+            }
+            .rule {
+                width: 72px;
+                height: 3px;
+                background: var(--bronze);
+            }
+            .footer {
+                font-family: var(--mono);
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 1;
+                letter-spacing: 2px;
+                color: var(--bone-faint);
+                white-space: nowrap;
+            }
+            /* the hall's own initial — quiet, but not invisible */
+            .rune {
+                position: absolute;
+                right: 84px;
+                bottom: 50px;
+                font-family: var(--runic);
+                font-size: 34px;
+                line-height: 1;
+                color: var(--bronze-dim);
+                opacity: 0.55;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="grid"></div>
+            <div class="glow"></div>
+
+            <!-- The Ymir Algiz-anvil — the hall's own mark (public/images/logo.svg) -->
+            <svg class="mark" width="620" height="630" viewBox="0 0 620 630" fill="none" aria-hidden="true">
+                <defs>
+                    <filter id="forge-glow" x="-40%" y="-40%" width="180%" height="180%">
+                        <feGaussianBlur stdDeviation="16" />
+                    </filter>
+                </defs>
+                <g transform="translate(32 104) scale(1.55)">
+                    <!-- the bronze light under the mark -->
+                    <g
+                        fill="none"
+                        stroke="#c9973f"
+                        stroke-width="16"
+                        stroke-opacity="0.5"
+                        stroke-linecap="square"
+                        stroke-linejoin="miter"
+                        filter="url(#forge-glow)"
+                    >
+                        <path d="M 128 48 V 192 M 128 112 L 64 48 M 128 112 L 192 48" />
+                        <path d="M 48 192 H 208 M 80 224 H 176" />
+                    </g>
+                    <!-- the mark itself, bone on stone -->
+                    <g
+                        fill="none"
+                        stroke="#cfc3a9"
+                        stroke-width="15"
+                        stroke-linecap="square"
+                        stroke-linejoin="miter"
+                    >
+                        <path d="M 128 48 V 192 M 128 112 L 64 48 M 128 112 L 192 48" />
+                        <path d="M 48 192 H 208 M 80 224 H 176" />
+                    </g>
+                </g>
+            </svg>
+
+            <div class="block">
+                <div class="wordmark" style="position: absolute; left: 0; top: 130px">ÞING</div>
+                <div class="sub" style="position: absolute; left: 4px; top: 258px">THE ASSEMBLY HALL</div>
+                <div class="tagline" style="position: absolute; left: 4px; top: 330px">
+                    A room of your own. One click, no download.
+                </div>
+                <div class="body" style="position: absolute; left: 4px; top: 380px">
+                    Screen sharing, chat, recording, whiteboard —<br />
+                    the media flows directly between your people.
+                </div>
+                <div class="rule" style="position: absolute; left: 4px; top: 472px"></div>
+                <div class="footer" style="position: absolute; left: 4px; top: 534px">
+                    PEER-TO-PEER · NO TOLL BOOTH · PING.ZERWIZ.ORG
+                </div>
+            </div>
+
+            <!-- ᚦ — thurisaz, the rune of Þ: the hall's own initial -->
+            <div class="rune">ᚦ</div>
+
+            <div class="edge-top"></div>
+            <div class="edge-bottom"></div>
+        </div>
+    </body>
+</html>

@@ -2,8 +2,8 @@
 <html lang="en" class="no-js">
     <head>
         <title id="landingTitle">Þing — the assembly hall of Ymir</title>
-        <link id="shortcutIcon" rel="shortcut icon" href="../images/logo.svg" />
-        <link id="appleTouchIcon" rel="apple-touch-icon" href="../images/logo.svg" />
+        <link id="shortcutIcon" rel="shortcut icon" href="/images/logo.svg" />
+        <link id="appleTouchIcon" rel="apple-touch-icon" href="/images/logo.svg" />
 
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,11 +22,21 @@
         <meta property="og:description" content="{{OG_DESCRIPTION}}" />
         <meta property="og:image" content="{{OG_IMAGE}}" />
         <meta property="og:url" content="{{OG_URL}}" />
+        <meta property="og:image:secure_url" content="{{OG_IMAGE}}" />
+        <meta property="og:image:type" content="{{OG_IMAGE_TYPE}}" />
+        <meta property="og:image:width" content="{{OG_IMAGE_WIDTH}}" />
+        <meta property="og:image:height" content="{{OG_IMAGE_HEIGHT}}" />
+        <meta property="og:image:alt" content="{{OG_IMAGE_ALT}}" />
+        <meta property="og:locale" content="{{OG_LOCALE}}" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="{{OG_TITLE}}" />
         <meta name="twitter:description" content="{{OG_DESCRIPTION}}" />
         <meta name="twitter:image" content="{{OG_IMAGE}}" />
+        <meta name="twitter:image:alt" content="{{OG_IMAGE_ALT}}" />
+
+        <!-- The hall's own address: the one URL a crawler should believe -->
+        <link rel="canonical" href="{{OG_URL}}" />
 
         <!-- The cloth — stone and bronze and bone -->
         <link rel="stylesheet" href="../css/_tokens.css" />

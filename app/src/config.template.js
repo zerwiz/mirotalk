@@ -344,18 +344,35 @@ module.exports = {
             customizeRoomButtonLabel: 'CUSTOMIZE ROOM',
             joinLastLabel: 'Your recent room:',
         },
+        // The social card (Open Graph). The picture and the address are ABSOLUTE
+        // on purpose: a crawler does not resolve a relative path against a page it
+        // has not fetched yet, and an empty og:url tells it nothing at all — which
+        // is how this hall used to be shared (a bare link, no card).
+        //
+        // The image is a BUILD ARTIFACT of tools/og-card/thing-og.html; re-cut it
+        // with tools/og-card/render.sh whenever the brand moves. The JPEG is what
+        // crawlers fetch (a tenth of the bytes of the PNG twin, and every one of
+        // them takes it).
         og: {
             type: 'app-webrtc',
             siteName: 'Ymir · Þing',
             title: 'Þing — the assembly hall of Ymir',
             description:
                 'Peer-to-peer video hall of Ymir. Rooms of your own — screen sharing, chat, recording, whiteboard — with media flowing directly between participants.',
-            image: '../images/logo.svg',
-            url: '',
+            image: 'https://ping.zerwiz.org/images/thing-og.jpg',
+            imageAlt:
+                'Þing — the assembly hall of Ymir. Peer-to-peer video rooms of your own, the media flowing directly between participants.',
+            imageType: 'image/jpeg',
+            imageWidth: 1200,
+            imageHeight: 630,
+            locale: 'en_GB',
+            url: 'https://ping.zerwiz.org/',
         },
         site: {
-            shortcutIcon: '../images/logo.svg',
-            appleTouchIcon: '../images/logo.svg',
+            // root-absolute: a relative icon path breaks on every nested route
+            // (/join/<room>, /login, /404), and the client re-applies these
+            shortcutIcon: '/images/logo.svg',
+            appleTouchIcon: '/images/logo.svg',
             landingTitle: 'Þing — the assembly hall of Ymir',
             newCallTitle: 'Þing — a room of your own',
             newCallRoomTitle: 'Pick a name. <br />Share the link. <br />The hall opens.',
