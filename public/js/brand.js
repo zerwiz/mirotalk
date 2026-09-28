@@ -65,8 +65,9 @@ let brand = {
         joinLastLabel: 'Your recent room:',
     },
     site: {
-        shortcutIcon: '../images/logo.svg',
-        appleTouchIcon: '../images/logo.svg',
+        // root-absolute: a relative icon path breaks on every nested route
+        shortcutIcon: '/images/logo.svg',
+        appleTouchIcon: '/images/logo.svg',
         landingTitle: 'Þing — the assembly hall of Ymir',
         newCallTitle: 'Þing — a room of your own',
         newCallRoomTitle: 'Pick a name. <br />Share the link. <br />The hall opens.',
